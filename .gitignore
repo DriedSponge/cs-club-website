@@ -13,3 +13,7 @@ yarn-error.log
 /.idea
 .editorconfig
 .styleci.yml
+/public/js
+/public/css
+/public/build
+/public/mix-manifest.json

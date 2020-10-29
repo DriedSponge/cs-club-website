@@ -1,0 +1,34 @@
+// This file is where we include our css dependancies/libraries. This is also where we include our other css files
+
+//Sponge Helpers
+@import "~sponge-helpers/src/sass/main";
+
+// Import variables file
+@import 'variables';
+
+//Import styles file
+@import "styles";
+
+
+
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-small-phone-only {
+    @media (max-width: 443px) { @content; }
+}
+@mixin for-tablet-and-down{
+    @media (max-width: 992px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}

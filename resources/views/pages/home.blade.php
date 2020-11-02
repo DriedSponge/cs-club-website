@@ -4,6 +4,6 @@
 @section('content')
     <div class="container">
         <h1 class="text-center">Welcome!</h1>
-        <h3 class="text-center">This is just some test content to make sure everything is working properly.</h3>
+        <h3 class="text-center">We are currently working on this I guess.</h3>
     </div>
 @endsection

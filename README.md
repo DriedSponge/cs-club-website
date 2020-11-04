@@ -21,11 +21,11 @@ Make sure you have the following applications installed:
 
 `git clone gh repo clone DriedSponge/cs-club-website`
 
-**Install JS Dependancies:**
+**Install JS Dependencies:**
 
 `npm install`
 
-**Install Composer Dependancies:**
+**Install Composer Dependencies:**
 
 `composer install`
 

@@ -19,7 +19,7 @@ Make sure you have the following applications installed:
 
 **Clone the repository:**
 
-`git clone gh repo clone DriedSponge/cs-club-website`
+`git clone https://github.com/DriedSponge/cs-club-website.git`
 
 **Install JS Dependencies:**
 

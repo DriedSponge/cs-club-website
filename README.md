@@ -21,9 +21,17 @@ Make sure you have docker installed on your computer:
 - [Docker For Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) - [Install Instructions](https://docs.docker.com/docker-for-mac/install/)
 - [Docker For Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows/) - [Install Instructions](https://docs.docker.com/docker-for-windows/install/)
 
-For docker to work, you must have BIOS level virtualization enabled on your system.
-- On windows you do enable it in your system bios 
-- As far as I am aware, if you're on **mac**, you **do not** have to worry about this.
+**If you are on Windows 10**, you must have BIOS level virtualization enabled on your system.
+- On windows you enable it in your system bios 
+- To access your bios
+    - Open the start menu
+    - Click on the power icon
+    - Hold shift & click restart while holding shift.
+    - A menu will popup shortly, click troubleshoot
+    - Click advanced options
+    - And then click UEFI firmware settings, then restart.
+- Once you are in your bios, there should be a setting in there to enable virtualization
+- **I strongly reccomend looking up `how to enable virtualization on {insert pc model or motherboard model}`. Becuase every system bios is different (unless the systems are the same model, or have the same MB), it is difficult for me to help you if you run into any issues.**
 
 I will go over all of this in a video in the future.
 

@@ -12,6 +12,7 @@ If you are a member of the club and wanting to contribute to this project, more 
 
 These videos will help you get started:
 - [Installing Development Tools and Getting The Project Ready For Development (No Docker)](https://www.youtube.com/watch?v=pEJEi8trSpc)
+- [Installing The Project With Docker](https://youtu.be/0muvVhhZBHk)
 - [Getting Started With Page Stuff](https://www.youtube.com/watch?v=d9kfCARLCR8)
 
 
@@ -37,7 +38,7 @@ Make sure you have docker installed on your computer:
 - Once you are in your bios, there should be a setting in there to enable virtualization
 - **I strongly reccomend looking up `how to enable virtualization on {insert pc model or motherboard model}`. Becuase every system bios is different (unless the systems are the same model, or have the same MB), it is difficult for me to help you if you run into any issues.**
 
-I will go over all of this in a video in the future.
+[This video](https://youtu.be/0muvVhhZBHk) goes over the entire process.
 
 **Clone the repository or download the zip**
 `git clone https://github.com/DriedSponge/cs-club-website.git`

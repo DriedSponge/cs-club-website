@@ -3,7 +3,9 @@ This is the github repository for the BHS Computer Science Club website.
 
 This website uses the Laravel PHP framework.
 
-**We are using the bootstrap css library, you can find the documentation [here](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/). Please take some time to look at all of the componets. Also please take a look at their [grid system](https://v5.getbootstrap.com/docs/5.0/layout/grid/). This will help make the content responseive(so it looks good on mobile), and it will make the content look more structued.**
+
+## Bootstrap
+We are using the bootstrap css library, you can find the documentation [here](https://v5.getbootstrap.com/docs/5.0/getting-started/introduction/). Please take some time to look at all of the componets. Also please take a look at their [grid system](https://v5.getbootstrap.com/docs/5.0/layout/grid/). This will help make the content responseive(so it looks good on mobile), and it will make the content look more structued.
 
 ## Contributing
 If you are a member of the club and wanting to contribute to this project, more information on how you can do that will be released soon.

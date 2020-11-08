@@ -21,8 +21,11 @@ so now we want to specify what goes in that yield for this page.
 
 {{-- This is where we define what goes into our content section --}}
 @section('content')
-    <div class="container">
-        <h1 class="text-center">Welcome!</h1>
-        <h3 class="text-center">We are currently working on this I guess.</h3>
+    <div class="main" class="container">
+        <div class="home">
+            <h1 class="text-center">Welcome!</h1>
+            <h3>Our Vision<h3>
+            <p>A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!</p>
+        </div>
     </div>
 @endsection

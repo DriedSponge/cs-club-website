@@ -1,2 +1,4 @@
 ./src/vendor
 ./src/node_modules
+./src/public/app/jas
+/src/public/app/css

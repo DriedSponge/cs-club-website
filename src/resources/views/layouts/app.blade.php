@@ -13,6 +13,7 @@ The @yield directive is used to display the contents of a given section.
 Any page that is an extension (child) of this layout will have a section named content.
 The content section will contain the pages general content, which will automatically be put in the body.
 --}}
+<br>
 @yield('content')
 
 </body>

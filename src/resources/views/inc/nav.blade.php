@@ -10,7 +10,10 @@
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}"><img src="imgs/logo.png"></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Members</a>
+                    <a class="nav-link active" href="#">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="{{route('events')}}">Events</a>
                 </li>
             </ul>
         </div>

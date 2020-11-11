@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
     <div class="container">
-        <a class="navbar-brand" href="#">BHS Computer Science Club</a>
+        <h1 class="navbar-brand" href="#">Bothell High School's Computer Science Club</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,6 +11,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Members</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('projects')}}">Current Projects</a>
                 </li>
             </ul>
         </div>

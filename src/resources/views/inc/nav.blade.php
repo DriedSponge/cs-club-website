@@ -18,6 +18,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('projects')}}">Projects</a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('contactus')}}" class="nav-link" href="#">Contact Us</a>
+                </li>
             </ul>
         </div>
     </div>

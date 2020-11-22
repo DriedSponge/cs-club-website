@@ -25,3 +25,7 @@ Route::get('/current-projects', function () {
 Route::get('/events', function () {
 	return view('pages.events');
 })->name("events");
+
+Route::get('/contact-us', function () {
+    return view("pages.contactus");
+})->name("contactus");

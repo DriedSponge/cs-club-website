@@ -2,3 +2,4 @@
 .editorconfig
 .styleci.yml
 .vscode
+node_modules

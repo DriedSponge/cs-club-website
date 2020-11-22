@@ -50,3 +50,8 @@ Laravel is a web application framework with expressive, elegant syntax. Laravel 
 - Database agnostic [schema migrations](https://laravel.com/docs/migrations).
 - [Robust background job processing](https://laravel.com/docs/queues).
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+
+## To add a page to the website: (Dash Pickrell)
+1. In src/resources/views/pages 						 	make a file for your page (You may want to duplicate a current page and modify it)
+2. In src/resources/views/inc/nav.blade.php 	add your page to the nav-bar and/or the nav-list
+3. In src/resources/routes/web.php 				 	  add your page

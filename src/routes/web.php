@@ -18,6 +18,14 @@ Route::get('/', function () {
     return view('pages.home');
 })->name("home");
 
+Route::get('/current-projects', function () {
+    return view('pages.projects');
+})->name("projects");
+
 Route::get('/events', function () {
 	return view('pages.events');
 })->name("events");
+
+Route::get('/contact-us', function () {
+    return view("pages.contactus");
+})->name("contactus");

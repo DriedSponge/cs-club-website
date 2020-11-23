@@ -9,9 +9,11 @@
         <div class="text-center">
             <h1>Contact Us</h1>
             <br>
-            <p><strong>If you're interested in joining the club, fill out this <a href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong> </p>
-            <p><strong>For other questions or inquries, you can <a href="mailto:bothellcompsciclub@gmail.com" target="_blank">email
-                    us</a>, join our <a href="https://discord.gg/uGW8uXVBJW" target="_blank">Discord Server</a>, or
+            <p><strong>If you're interested in joining the club, fill out this <a
+                            href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong></p>
+            <p><strong>For other questions or inquries, you can <a href="mailto:bothellcompsciclub@gmail.com"
+                                                                   target="_blank">email
+                        us</a>, join our <a href="https://discord.gg/uGW8uXVBJW" target="_blank">Discord Server</a>, or
                     fillout the below contact form.</strong></p>
         </div>
         <br>
@@ -27,23 +29,44 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                            <label class="form-label" for="name">Your Name <span class="text-danger">*</span></label>
-                            <input name="name" id="name" type="text" class="form-control" placeholder="Your Name" max="120" />
+                            <label class="form-label" for="name">Your Name <span
+                                        class="text-danger">*</span></label>
+                            <div class="input-group">
+
+                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name"
+                                       max="150"/>
+                                <div id="name-feedback"></div>
+                            </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
                             <label class="form-label" for="email">Your Email <span class="text-danger">*</span></label>
-                            <input name="email" id="email" type="text" class="form-control" placeholder="Your Email" max="120" />
+                            <div class="input-group">
+                                <input name="email" id="email" type="text" class="form-control" placeholder="Your Email"
+                                       max="150"/>
+                                <div id="email-feedback"></div>
+                            </div>
                         </div>
                         <div class="col-12 mb-3">
-                            <label class="form-label" for="subject">Subject <span class="text-danger">*</span></label>
-                            <input name="subject" id="subject" type="text" class="form-control  mb-3" placeholder="Subject" max="256" />
-                            <label class="form-label" for="message">Message <span class="text-danger">*</span></label>
-                            <textarea class="form-control" rows="5" name="message" id="message" placeholder="Message..." maxlength="2000" minlength="10">Message...</textarea>
+                            <label class="form-label" for="subject">Subject <span
+                                        class="text-danger">*</span></label>
+                            <div class="input-group mb-3">
+
+                                <input name="subject" id="subject" type="text" class="form-control"
+                                       placeholder="Subject" max="256"/>
+                                <div id="subject-feedback"></div>
+                            </div>
+                            <label class="form-label" for="message">Message <span
+                                        class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <textarea class="form-control" rows="5" name="message" id="message"
+                                          placeholder="Message..." maxlength="2000" minlength="15">Message...</textarea>
+                                <div id="message-feedback"></div>
+                            </div>
                         </div>
                         <div class="col-12">
                             <div id="captcha" class="captcha"></div>
                             <input type="hidden" value="" name="captcha_token">
-                            <button id="send" class="btn btn-lg btn-primary d-none" type="submit">Send</button>
+                            <button id="send" class="btn btn-outline-primary d-none" type="submit">Send</button>
                         </div>
                     </div>
                 </div>
@@ -67,50 +90,58 @@
                             console.log(response.data.captcha);
                         }
                         var r = response.data;
-                        for (var key in r){
+                        $('#contact input, #contact textarea').removeClass("is-invalid").addClass('is-valid')
+                        for (var key in r) {
                             console.log(key, r[key][0]);
+                            $("#" + key).addClass('is-invalid');
+                            $("#" + key + "-feedback").removeClass("is-valid").addClass('invalid-feedback').text(r[key])
                         }
                     }
                 },
                 loader: {
-                    enabled:true,
-                    fullScreen:false,
-                    destroyLoader:true,
-                    theme:"loading-cover-light"
+                    enabled: true,
+                    fullScreen: false,
+                    destroyLoader: true,
+                    theme: "loading-cover-light"
                 },
             });
         })
-        function Reset(){
+
+        function Reset() {
             RegenCap()
-            $('#contact-form').show().formReset();
+            $('#contact').show().formReset();
             $('#success-message').addClass('d-none');
+            $('#contact input, #contact textarea').removeClass("is-invalid").removeClass('is-valid')
         }
-        VerifyCallback = function(response) {
+
+        VerifyCallback = function (response) {
             $('#send').removeClass('d-none')
-            $('[name="captcha_token"]').attr('value',response)
+            $('[name="captcha_token"]').attr('value', response)
             $('#captcha').addClass('d-none')
         }
         ExpiredCallback = function (response) {
             $('#captcha').removeClass('d-none')
-            $('#captcha_token').attr('value','botmaybe')
+            $('#captcha_token').attr('value', 'botmaybe')
             $('#send').addClass('d-none')
         }
         ErrorCallback = function (response) {
             alert('Captcha faild, please try again.')
         }
-        function RegenCap(){
+
+        function RegenCap() {
             $('#captcha').removeClass('d-none')
-            $('#captcha_token').attr('value','botmaybe')
+            $('#captcha_token').attr('value', 'botmaybe')
             $('#send').addClass('d-none')
             grecaptcha.reset();
         }
-        var onloadCallback = function() {
+
+        var onloadCallback = function () {
             grecaptcha.render('captcha', {
-                'sitekey' : '{{config("captcha.sitekey")}}',
+                'sitekey': '{{config("captcha.sitekey")}}',
                 'theme': 'light',
-                'callback':VerifyCallback,
-                'expired-callback':ExpiredCallback,
-                'error-callback':ErrorCallback
+                'callback': VerifyCallback,
+                'expired-callback': ExpiredCallback,
+                'error-callback': ErrorCallback
             });
         };
     </script>

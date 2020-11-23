@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    function Store(Request $request){
+    function send(Request $request){
 
     }
 }

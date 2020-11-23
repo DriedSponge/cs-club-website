@@ -41,7 +41,7 @@ class ContactController extends Controller
                 $data->Message = $request->message;
                 Mail::to(config('mail.contactemail'))->send(new ContactForm($data));
                 try {
-                    return response()->json(['success' => 'Your message has been sent!']);
+                    return response()->json(['success' => 'Your message has been successfully sent!']);
                 } catch (Exception $e) {
                     return response()->json(['error' => 'Message failed to send, please try again later']);
                 }

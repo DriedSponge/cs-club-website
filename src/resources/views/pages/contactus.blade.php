@@ -4,23 +4,27 @@
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 @endsection
 @section('content')
+    <div class="text-center">
+        <h1>Contact Us</h1>
+        <br>
+        <p><strong>If you're interested in joining the club, fill out this <a
+                        href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong></p>
+        <p><strong>For other questions or inquries, you can <a href="mailto:bothellcompsciclub@gmail.com"
+                                                               target="_blank">email
+                    us</a>, join our <a href="https://discord.gg/uGW8uXVBJW" target="_blank">Discord Server</a>, or
+                fillout the below contact form.</strong></p>
+    </div>
     <br>
     <div class="container">
-        <div class="text-center">
-            <h1>Contact Us</h1>
-            <br>
-            <p><strong>If you're interested in joining the club, fill out this <a
-                            href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong></p>
-            <p><strong>For other questions or inquries, you can <a href="mailto:bothellcompsciclub@gmail.com"
-                                                                   target="_blank">email
-                        us</a>, join our <a href="https://discord.gg/uGW8uXVBJW" target="_blank">Discord Server</a>, or
-                    fillout the below contact form.</strong></p>
-        </div>
         <br>
         <div id="success-message" class="alert alert-success d-none" role="alert">
-            <span id="succtext">Your message has been sent!</span>
+            <h4 class="alert-heading">Good Job!</h4>
+            <p id="succtext">Your message has been successfully sent!</p>
+            <hr>
+            <p class="mb-0">
+                <button class="btn btn-success" onclick="Reset()">Send Another Message</button>
+            </p>
         </div>
-
         <form id="contact" method="POST" action="{{route('contact-post')}}">
             <div class="card shadow border-0">
                 <div class="card-header">
@@ -33,15 +37,18 @@
                                         class="text-danger">*</span></label>
                             <div class="input-group">
 
-                                <input name="name" id="name" type="text" class="form-control" placeholder="Your Name"
+                                <input name="name" id="name" type="text" class="form-control"
+                                       placeholder="Your Name"
                                        max="150"/>
                                 <div id="name-feedback"></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                            <label class="form-label" for="email">Your Email <span class="text-danger">*</span></label>
+                            <label class="form-label" for="email">Your Email <span
+                                        class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input name="email" id="email" type="text" class="form-control" placeholder="Your Email"
+                                <input name="email" id="email" type="text" class="form-control"
+                                       placeholder="Your Email"
                                        max="150"/>
                                 <div id="email-feedback"></div>
                             </div>
@@ -65,6 +72,9 @@
                         </div>
                         <div class="col-12">
                             <div id="captcha" class="captcha"></div>
+                            <div class="invalid-feedback">
+                                Captcha failed, please try again.
+                            </div>
                             <input type="hidden" value="" name="captcha_token">
                             <button id="send" class="btn btn-outline-primary d-none" type="submit">Send</button>
                         </div>
@@ -87,7 +97,7 @@
                         }
                         if (response.data.captcha) {
                             RegenCap()
-                            console.log(response.data.captcha);
+                            $('#captcha').addClass('is-invalid')
                         }
                         var r = response.data;
                         $('#contact input, #contact textarea').removeClass("is-invalid").addClass('is-valid')
@@ -96,6 +106,7 @@
                             $("#" + key).addClass('is-invalid');
                             $("#" + key + "-feedback").removeClass("is-valid").addClass('invalid-feedback').text(r[key])
                         }
+
                     }
                 },
                 loader: {
@@ -111,13 +122,16 @@
             RegenCap()
             $('#contact').show().formReset();
             $('#success-message').addClass('d-none');
+            $('.captcha').removeClass('is-invalid')
+
             $('#contact input, #contact textarea').removeClass("is-invalid").removeClass('is-valid')
         }
 
         VerifyCallback = function (response) {
             $('#send').removeClass('d-none')
             $('[name="captcha_token"]').attr('value', response)
-            $('#captcha').addClass('d-none')
+            $('#captcha').addClass('d-none').removeClass('is-invalid')
+
         }
         ExpiredCallback = function (response) {
             $('#captcha').removeClass('d-none')
@@ -125,7 +139,7 @@
             $('#send').addClass('d-none')
         }
         ErrorCallback = function (response) {
-            alert('Captcha faild, please try again.')
+            $("captcha").addClass('is-invalid')
         }
 
         function RegenCap() {

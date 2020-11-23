@@ -30,15 +30,17 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     {{-- Sets the favicon https://en.wikipedia.org/wiki/Favicon --}}
-{{--    <link rel="icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">--}}
-    {{-- Google Analytics Tracking --}}
+    {{--    <link rel="icon" href="{{asset('images/favicon.png')}}" type="image/x-icon">--}}
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8JDG0LSDH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+
         function gtag() {
             dataLayer.push(arguments);
         }
+
         gtag('js', new Date());
+
         gtag('config', 'G-D8JDG0LSDH');
     </script>
     @yield('head')

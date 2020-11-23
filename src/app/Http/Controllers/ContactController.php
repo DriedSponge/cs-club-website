@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactFormResponse;
+use App\Models\Mail\ContactForm;
 use http\Exception;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
@@ -31,12 +34,12 @@ class ContactController extends Controller
                 'response' => $request->captcha_token,
             ]);
             if ($response['success']) {
-//                $data = new ContactResponses();
-//                $data->Name = $request->your_name;
-//                $data->Email = $request->email;
-//                $data->Subject = $request->subject;
-//                $data->Message = $request->message;
-                //Mail::to('jordan@driedsponge.net')->send(new ContactForm($data));
+                $data = new ContactFormResponse();
+                $data->Name = $request->name;
+                $data->Email = $request->email;
+                $data->Subject = $request->subject;
+                $data->Message = $request->message;
+                Mail::to(config('mail.contactemail'))->send(new ContactForm($data));
                 try {
                     return response()->json(['success' => 'Your message has been sent!']);
                 } catch (Exception $e) {

@@ -6,7 +6,7 @@
 @section('content')
     <br>
     <div class="text-center">
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
         <br>
         <p><strong>If you're interested in joining the club, fill out this <a
                         href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong></p>
@@ -29,7 +29,7 @@
         <form id="contact" method="POST" action="{{route('contact-post')}}">
             <div class="card shadow border-0">
                 <div class="card-header">
-                    <h3>Contact Form</h3>
+                    <h2>Contact Form</h2>
                 </div>
                 <div class="card-body">
                     <div class="row">

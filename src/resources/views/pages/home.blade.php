@@ -21,11 +21,61 @@ so now we want to specify what goes in that yield for this page.
 
 {{-- This is where we define what goes into our content section --}}
 @section('content')
-    <div class="main" class="container">
-        <div class="home">
-            <h1 class="text-center">Welcome!</h1>
-            <h3>Our Vision<h3>
-            <p>A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!</p>
+<header>
+        <!--Mask-->
+        <div id="intro" class="view">
+
+            <div class="mask rgba-black-strong">
+
+                <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+
+                    <div class="row d-flex justify-content-center text-center">
+
+                        <div class="col-md-10">
+
+                            <!-- Heading -->
+                            <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Welcome</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                            <div class="container">
+                                <section id="vision" class="text-center">
+
+                                    <!-- Heading -->
+                                    <h2 class="mb-5 font-weight-bold">Our Vision</h2>
+
+                                    <!--Grid row-->
+                                    <div class="row d-flex justify-content-center mb-4">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-8 mb-2">
+
+                                            <!-- Description -->
+                                            <p class="grey-text">
+                                                A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!
+                                            </p>
+                                            <a role="button" class="btn btn-primary-outline" href="#">Learn More</a>
+
+
+                                        </div>
+                                        <!--Grid column-->
+
+                                    </div>
+                                    <!--Grid row-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
+        <!--/.Mask-->
+</header>
+
 @endsection

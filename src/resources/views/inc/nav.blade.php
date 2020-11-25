@@ -10,7 +10,7 @@
                     <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Members</a>
+                    <a class="nav-link" href="{{route('members')}}">Members</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('events')}}">Events</a>

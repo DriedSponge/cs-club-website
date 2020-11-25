@@ -34,22 +34,22 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                            <label class="form-label" for="name">Your Name <span
+                            <label class="form-label" for="name">Name <span
                                         class="text-danger">*</span></label>
                             <div class="input-group">
 
                                 <input name="name" id="name" type="text" class="form-control"
-                                       placeholder="Your Name"
+                                       placeholder="John Doe"
                                        max="150"/>
                                 <div id="name-feedback"></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
-                            <label class="form-label" for="email">Your Email <span
+                            <label class="form-label" for="email">Email <span
                                         class="text-danger">*</span></label>
                             <div class="input-group">
                                 <input name="email" id="email" type="text" class="form-control"
-                                       placeholder="Your Email"
+                                       placeholder="email@example.com"
                                        max="150"/>
                                 <div id="email-feedback"></div>
                             </div>
@@ -60,14 +60,14 @@
                             <div class="input-group mb-3">
 
                                 <input name="subject" id="subject" type="text" class="form-control"
-                                       placeholder="Subject" max="256"/>
+                                       placeholder="Some interesting subject..." max="256"/>
                                 <div id="subject-feedback"></div>
                             </div>
                             <label class="form-label" for="message">Message <span
                                         class="text-danger">*</span></label>
                             <div class="input-group">
                                 <textarea class="form-control" rows="5" name="message" id="message"
-                                          placeholder="Message..." maxlength="2000" minlength="15">Message...</textarea>
+                                          placeholder="Message..." maxlength="2000" minlength="15"></textarea>
                                 <div id="message-feedback"></div>
                             </div>
                         </div>

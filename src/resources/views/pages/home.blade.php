@@ -57,8 +57,7 @@ so now we want to specify what goes in that yield for this page.
                                             <p class="grey-text">
                                                 A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!
                                             </p>
-                                            <a role="button" class="btn btn-primary-outline" href="#">Learn More</a>
-
+                                            <a class="btn btn-outline-primary" href="{{route('projects')}}" role="button">Learn More</a>
 
                                         </div>
                                         <!--Grid column-->

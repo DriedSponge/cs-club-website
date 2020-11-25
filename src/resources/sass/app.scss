@@ -15,7 +15,8 @@ $primary: #005F94;
 //Import styles file
 @import "styles";
 
-
+//Import member styles file
+@import "member-style";
 
 @mixin for-phone-only {
     @media (max-width: 599px) { @content; }

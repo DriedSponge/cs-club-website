@@ -29,3 +29,4 @@ Route::get('/events', function () {
 Route::get('/contact-us', function () {
     return view("pages.contactus");
 })->name("contactus");
+Route::post('/contact-us/send', 'App\Http\Controllers\ContactController@send')->name('contact-post');

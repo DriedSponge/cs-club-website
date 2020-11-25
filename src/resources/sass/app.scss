@@ -1,5 +1,8 @@
 // This file is where we include our css dependancies/libraries. This is also where we include our other css files
 
+$primary: #005F94;
+
+
 //Import Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
@@ -11,7 +14,6 @@
 
 //Import styles file
 @import "styles";
-
 
 
 
@@ -36,3 +38,4 @@
 @mixin for-big-desktop-up {
     @media (min-width: 1800px) { @content; }
 }
+@import "./components/captcha";

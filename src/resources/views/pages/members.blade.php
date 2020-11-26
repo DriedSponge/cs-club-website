@@ -28,7 +28,7 @@
               ["name"=>"Adit Gupta","title"=>"External Vice President","img"=>"adit.jpg"],
               ["name"=>"Clair Li","title"=>"Secretary","img"=>"blank-user.gif"],
               ["name"=>"Roshan Skariah","title"=>"Treasurer","img"=>"roshan.jpg"],
-              ["name"=>"Dash Pickrell","title"=>"Treasurer","img"=>"Dash.jpg"],
+              ["name"=>"Dash Pickrell","title"=>"Treasurer","img"=>"dash.jpg"],
               ["name"=>"Yasmine Shubber","title"=>"Public Relations","img"=>"blank-user.gif"],
               ["name"=>"Wyatt Ford","title"=>"Webmaster","img"=>"wyatt.jpg"],
               ["name"=>"Nathan Hendrickson","title"=>"Co-Events Chair","img"=>"blank-user.gif"],

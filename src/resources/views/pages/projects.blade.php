@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title','Projects')
+@section('description','Our clubs past, current, and future projects.')
 @section('content')
 <div class="main" class="container">
     <style>

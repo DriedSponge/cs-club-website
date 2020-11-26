@@ -26,7 +26,7 @@ so now we want to specify what goes in that yield for this page.
         <div class="members-row">
             <div>
                 <img src="imgs/members/soham.jpg" alt="Soham" class="members-image">
-                <h2 class="text-center">Soham</h2>
+                <h2 class="text-center">Soham Bhosale</h2>
                 <h3 class="text-center">President</h3>
             </div>
         </div>

@@ -1,140 +1,97 @@
-{{--
-We are extending our default layout, therefore making this page a child of that layout.
-Since this is now a child of the default layout, it will inherit all of the default layouts properties.'
-
-Views which extend a Blade layout may inject content into the layout's sections using @section directives.
-Remember, the contents of these sections will be displayed in the layout using @yield.
-https://laravel.com/docs/8.x/blade#extending-a-layout
---}}
 @extends('layouts.app')
-
-{{--
-The @section directive, as the name implies, defines a section of content.
-
-This is how we set our page title. We set the yield for title in our head include,
-so now we want to specify what goes in that yield for this page.
---}}
 @section('title','Members')
-
-{{-- Same as the title, but for the description. --}}
 @section('description',"Our clubs members")
-
-{{-- This is where we define what goes into our content section --}}
 @section('content')
-    <div class="members">
-        <h1 class="members-title" >Club Officers</h1>
-        <div class="members-row">
-            <div>
-                <img src="imgs/members/soham.jpg" alt="Soham" class="members-image">
-                <h2 class="text-center">Soham Bhosale</h2>
-                <h3 class="text-center">President</h3>
+{{--    I switched things over to use the bootstrap grid system to help make the page responsive on mobile devices--}}
+    <div class="container">
+        <br>
+        <h1 class="text-center font-weight-bolder">Our Members</h1>
+        <br>
+        <h2 class="text-center font-weight-bold">Officers</h2>
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <img src="{{asset('imgs/members/soham.jpg')}}" class="members-image img-fluid mx-auto d-block"
+                     alt="soham">
+                <div class="text-center">
+                    <h4>Soham Bhosale</h4>
+                    <h6 class="mb-2 text-muted">Club President</h6>
+                </div>
             </div>
         </div>
-        <div class="members-row">
-            <div class="members-column">
-                <img src="imgs/members/sathvik.jpg" alt="Sathvik" class="members-image">
-                <h2 class="text-center">Sathvik</h2>
-                <h3 class="text-center">Internal Vice President</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/adit.jpg" alt="Adit Gupta" class="members-image">
-                <h2 class="text-center">Adit Gupta</h2>
-                <h3 class="text-center">External Vice President</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Clair Li" class="members-image">
-                <h2 class="text-center">Clair Li</h2>
-                <h3 class="text-center">Secretary</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/roshan.jpg" alt="Roshan Skariah" class="members-image">
-                <h2 class="text-center">Roshan Skariah</h2>
-                <h3 class="text-center">Treasurer</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/dash.jpg" alt="Dash Pickrell" class="members-image">
-                <h2 class="text-center">Dash Pickrell</h2>
-                <h3 class="text-center">Treasurer</h3>
-            </div>
+        <br>
+        @php
+            // Sorry for throwing some PHP in here. I wanted to loop through an
+            // array of members so we can write less code. Let me know if you want to know more about this.
+            $officers =array(
+              ["name"=>"Sathvik","title"=>"Internal Vice President","img"=>"sathvik.jpg"],
+              ["name"=>"Adit Gupta","title"=>"External Vice President","img"=>"adit.jpg"],
+              ["name"=>"Clair Li","title"=>"Secretary","img"=>"blank-user.gif"],
+              ["name"=>"Roshan Skariah","title"=>"Treasurer","img"=>"roshan.jpg"],
+              ["name"=>"Dash Pickrell","title"=>"Treasurer","img"=>"Dash.jpg"],
+              ["name"=>"Yasmine Shubber","title"=>"Public Relations","img"=>"blank-user.gif"],
+              ["name"=>"Wyatt Ford","title"=>"Webmaster","img"=>"wyatt.jpg"],
+              ["name"=>"Nathan Hendrickson","title"=>"Co-Events Chair","img"=>"blank-user.gif"],
+              ["name"=>"Areeb Emran","title"=>"Co-Events Chair","img"=>"areeb.jpg"],
+              ["name"=>"Jong-Hyun Lee","title"=>"Fundraising Chair","img"=>"blank-user.gif"],
+            );
+            $i = 0;
+        @endphp
+        <div class="row justify-content-center">
+            @foreach($officers as $officer)
+                @php
+                    $i++;
+                @endphp
+                <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+                    <img src="{{asset('imgs/members/'.$officer['img'])}}"
+                         class="members-image img-fluid mx-auto d-block mb-1" alt="{{$officer['name']}}">
+                    <div class="text-center">
+                        <h5>{{$officer['name']}}</h5>
+                        <h6 class="mb-2 text-muted">{{$officer['title']}}</h6>
+                    </div>
+                </div>
+                @if($i % 6 == 0)
         </div>
-        <div class="members-row">
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Yasmine Shubber" class="members-image">
-                <h2 class="text-center">Yasmine Shubber</h2>
-                <h3 class="text-center">Public Relations</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/wyatt2.jpg" alt="Wyatt Ford" class="members-image">
-                <h2 class="text-center">Wyatt Ford</h2>
-                <h3 class="text-center">Webmaster</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Nathan Hendrickson-" class="members-image">
-                <h2 class="text-center">Nathan Hendrickson</h2>
-                <h3 class="text-center">Co-Events Chair</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Areeb Emran-" class="members-image">
-                <h2 class="text-center">Areeb Emran</h2>
-                <h3 class="text-center">Co-Events Chair</h3>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Jong-Hyun Lee" class="members-image">
-                <h2 class="text-center">Jong-Hyun Lee</h2>
-                <h3 class="text-center">Fundraising Chair</h3>
-            </div>
+        <div class="row justify-content-center">
+            @endif
+            @endforeach
         </div>
-        <h1 class="members-title" >Club Members</h1>
-        <div class="members-row">
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Kaden Allen" class="members-image">
-                <h2 class="text-center">Kaden Allen</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Yashwant Datti" class="members-image">
-                <h2 class="text-center">Yashwant Datti</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Alex Dimov" class="members-image">
-                <h2 class="text-center">Alex Dimov</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Shunzo Hida" class="members-image">
-                <h2 class="text-center">Shunzo Hida</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Manas Kumar" class="members-image">
-                <h2 class="text-center">Manas Kumar</h2>
-            </div>
-        </div>
-        <div class="members-row">
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Ivan Labovich" class="members-image">
-                <h2 class="text-center">Ivan Labovich</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Michelle Li" class="members-image">
-                <h2 class="text-center">Michelle Li</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Emily Pham" class="members-image">
-                <h2 class="text-center">Emily Pham</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Amanda Sim" class="members-image">
-                <h2 class="text-center">Amanda Sim</h2>
-            </div>
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Khushi Singh" class="members-image">
-                <h2 class="text-center">Khushi Singh</h2>
-            </div>
-        </div>
-        <div class="members-row">
-            <div class="members-column">
-                <img src="imgs/members/blank-user.gif" alt="Jordan Tucker" class="members-image">
-                <h2 class="text-center">Jordan Tucker</h2>
-            </div>
-        </div>
-    </div>
-
+            <br>
+            <h2 class="text-center font-weight-bold">Members</h2>
+            <br>
+                @php
+                    $members =array(
+                      ["name"=>"Yasmine Shubber","img"=>"blank-user.gif"],
+                      ["name"=>"Kaden Allen","img"=>"blank-user.gif"],
+                      ["name"=>"Yashwant Datti","img"=>"blank-user.gif"],
+                      ["name"=>"Alex Dimov","img"=>"blank-user.gif"],
+                      ["name"=>"Shunzo Hida","img"=>"blank-user.gif"],
+                      ["name"=>"Manas Kumar","img"=>"blank-user.gif"],
+                      ["name"=>"Ivan Labovich","img"=>"blank-user.gif"],
+                      ["name"=>"Michelle Li","img"=>"blank-user.gif"],
+                      ["name"=>"Emily Pham","img"=>"blank-user.gif"],
+                      ["name"=>"Amanda Sim","img"=>"blank-user.gif"],
+                      ["name"=>"Khushi Singh","img"=>"blank-user.gif"],
+                      ["name"=>"Jordan Tucker","img"=>"blank-user.gif"],
+                    );
+                    $j = 0;
+                @endphp
+                <div class="row justify-content-center">
+                    @foreach($members as $member)
+                        @php
+                            $j++;
+                        @endphp
+                        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+                            <img src="{{asset('imgs/members/'.$member['img'])}}"
+                                 class="members-image img-fluid mx-auto d-block mb-1" alt="{{$member['name']}}">
+                            <div class="text-center">
+                                <h5>{{$member['name']}}</h5>
+                                <h6 class="mb-2 text-muted">Member</h6>
+                            </div>
+                        </div>
+                        @if($j % 6 == 0)
+                </div>
+                <div class="row justify-content-center">
+    @endif
+    @endforeach
 @endsection

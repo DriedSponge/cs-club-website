@@ -1,40 +1,36 @@
 
-.members img{
-    height:250px;
-    width:200px;
-    object-fit: cover;
+.members img {
+  height: 250px;
+  width: 200px;
+  object-fit: cover;
 }
 
-  
+
 .members-image {
-display: block;
-margin-left: auto;
-margin-right: auto;
-padding: 2;
-width: 50%;
-border: 5px solid #abc;
+  border: 5px solid #abc;
+  width: 170px;
+  height: 227px;
 }
 
-  
 .members-row:after {
-content: "";
-padding: 20px; 
-display: table;
-clear: both;
+  content: "";
+  padding: 20px;
+  display: table;
+  clear: both;
 }
 
 .members-column {
-float: left;
-width: 20%;
+  float: left;
+  width: 20%;
 }
 
 .members-title {
-text-align: center !important;
-font-size: 350%;
-padding: 30px;
+  text-align: center !important;
+  font-size: 350%;
+  padding: 30px;
 }
 
 .title-center {
-text-align: center !important;
-padding: 20px;
+  text-align: center !important;
+  padding: 20px;
 }

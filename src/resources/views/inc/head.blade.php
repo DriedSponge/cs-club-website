@@ -43,5 +43,6 @@
 
         gtag('config', 'G-D8JDG0LSDH');
     </script>
+    <script src="https://kit.fontawesome.com/993187c8db.js" crossorigin="anonymous"></script>
     @yield('head')
 </head>

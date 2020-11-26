@@ -17,7 +17,7 @@ so now we want to specify what goes in that yield for this page.
 @section('title','Members')
 
 {{-- Same as the title, but for the description. --}}
-@section('description',"A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!")
+@section('description',"Our clubs members")
 
 {{-- This is where we define what goes into our content section --}}
 @section('content')

@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title',"Contact Us")
+@section('decription','Lets get in touch.')
 @section('head')
     <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
 @endsection
@@ -77,7 +78,7 @@
                                 Captcha failed, please try again.
                             </div>
                             <input type="hidden" value="" name="captcha_token">
-                            <button id="send" class="btn btn-outline-primary d-none" type="submit">Send</button>
+                            <button id="send" class="btn btn-outline-primary d-none" type="submit"><i class="fas fa-paper-plane"></i> Send</button>
                         </div>
                     </div>
                 </div>

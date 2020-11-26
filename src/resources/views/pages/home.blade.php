@@ -22,6 +22,22 @@ so now we want to specify what goes in that yield for this page.
 {{-- This is where we define what goes into our content section --}}
 @section('content')
     <div id="intro">
-
+        <div class="container">
+            <h1 class="text-center font-weight-bolder display-3 p-5">Welcome</h1>
+            <br>
+            <div class="container-sm">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h1>Our Vision</h1>
+                        <br>
+                        <p class="fs-4">
+                            A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!
+                        </p>
+                        <br>
+                        <a class="btn btn-outline-primary" href="{{route('projects')}}">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

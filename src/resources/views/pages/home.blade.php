@@ -26,7 +26,7 @@ so now we want to specify what goes in that yield for this page.
             <br>
             <h1 class="text-center display-4 font-weight-bold p-5">Welcome</h1>
             <br>
-            <div class="container-sm">
+            <div class="container-sm pb-5">
                 <div class="card shadow">
                     <div class="card-body text-center">
                         <h1>Our Vision</h1>

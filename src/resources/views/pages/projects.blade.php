@@ -5,7 +5,7 @@
     <div class="container">
         <br>
         <h1 class="text-center display-4 font-weight-bold">Current Projects</h1>
-        <h5 class="text-center">As a team, we work on many projects that challenge us to cultivate new skills.</h5>
+        <p class="text-center lead">As a team, we work on many projects that challenge us to cultivate new skills.</p>
         <br>
         <div class="container">
             <br>

@@ -7,7 +7,7 @@
 @section('content')
     <br>
     <div class="text-center">
-        <h1>Contact Us</h1>
+        <h1 class="display-4 font-weight-bold">Contact Us</h1>
         <br>
         <p><strong>If you're interested in joining the club, fill out this <a
                         href="https://forms.gle/KaEBXfWH2hKPJ52x6" target="_blank">google form</a></strong></p>

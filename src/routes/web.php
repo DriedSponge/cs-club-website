@@ -34,3 +34,7 @@ Route::post('/contact-us/send', 'App\Http\Controllers\ContactController@send')->
 Route::get('/members', function () {
     return view("pages.members");
 })->name("members");
+
+Route::get('/privacy-policy', function () {
+    return view("pages.privacy");
+})->name("privacy");

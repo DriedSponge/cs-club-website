@@ -10,7 +10,7 @@
         <h2 class="text-center font-weight-bold">Officers</h2>
         <br>
         <div class="row justify-content-center">
-            <div class="col-lg-2 col-md-6 col-sm-6">
+            <div class="col-lg-2 col-md-6 col-sm-12">
                 <img width="170" height="227" data-src="{{asset('imgs/members/soham.jpg')}}" class="members-image img-fluid mx-auto d-block lozad"
                      alt="soham">
                 <div class="text-center">
@@ -42,7 +42,7 @@
                 @php
                     $i++;
                 @endphp
-                <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+                <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
                     <img width="170" height="227" data-src="{{asset('imgs/members/'.$officer['img'])}}"
                          class="members-image img-fluid mx-auto d-block mb-1 lozad" alt="{{$officer['name']}}">
                     <div class="text-center">
@@ -81,7 +81,7 @@
                         @php
                             $j++;
                         @endphp
-                        <div class="col-lg-2 col-md-6 col-sm-6 mb-4">
+                        <div class="col-lg-2 col-md-6 col-sm-12 mb-4">
                             <img width="170" height="227" data-src="{{asset('imgs/members/'.$member['img'])}}"
                                  class="members-image img-fluid mx-auto d-block mb-1 lozad" alt="{{$member['name']}}">
                             <div class="text-center">

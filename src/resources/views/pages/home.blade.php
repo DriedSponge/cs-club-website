@@ -23,6 +23,7 @@ so now we want to specify what goes in that yield for this page.
 @section('content')
     <div id="intro">
         <div class="container">
+            <br>
             <h1 class="text-center display-4 font-weight-bold p-5">Welcome</h1>
             <br>
             <div class="container-sm">

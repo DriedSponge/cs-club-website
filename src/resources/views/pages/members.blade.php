@@ -5,7 +5,7 @@
 {{--    I switched things over to use the bootstrap grid system to help make the page responsive on mobile devices--}}
     <div class="container">
         <br>
-        <h1 class="text-center font-weight-bolder">Our Members</h1>
+        <h1 class="text-center display-4 font-weight-bold">Our Members</h1>
         <br>
         <h2 class="text-center font-weight-bold">Officers</h2>
         <br>

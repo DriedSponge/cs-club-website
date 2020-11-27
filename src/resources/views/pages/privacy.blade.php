@@ -24,6 +24,9 @@
                     the requests that you make in order to provide a better service, but they state that they will never
                     sell your personal information, or use it for marketing.</p>
             </div>
+            <div class="card-footer text-muted">
+                Last Updated: 11/27/20
+            </div>
         </div>
     </div>
 @endsection

@@ -62,7 +62,7 @@ so now we want to specify what goes in that yield for this page.
                                     <img data-src="{{$commit['author']['avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64">
                                 </div>
                                 <div class="col-lg-11 col-md-6">
-                                    <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong> <span class="text-muted fst-italic">{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->diffForHumans()}}</span></p>
+                                    <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong> <span data-toggle="tooltip" data-placement="top" title="{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->setTimezone("America/Los_Angeles")->toDayDateTimeString()}}" class="text-muted fst-italic">{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->diffForHumans()}}</span></p>
                                     <p class="card-text ">
                                         <a href="{{$commit['html_url']}}" target="_blank"><span class="badge  bg-primary">{{$commit['sha']}}</span></a>
                                         <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge bg-success"><i class="fas fa-code-branch"></i> master</span></a>
@@ -78,5 +78,9 @@ so now we want to specify what goes in that yield for this page.
     <script>
         const observer = lozad();
         observer.observe();
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
     </script>
 @endsection

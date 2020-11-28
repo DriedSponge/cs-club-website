@@ -64,8 +64,8 @@ so now we want to specify what goes in that yield for this page.
                                 <div class="col-lg-11 col-md-6">
                                     <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong></p>
                                     <p class="card-text ">
-                                        <a href="{{$commit['html_url']}}" target="_blank"><span class="badge rounded-pill bg-primary">{{$commit['sha']}}</span></a>
-                                        <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge rounded-pill bg-success">master</span></a>
+                                        <a href="{{$commit['html_url']}}" target="_blank"><span class="badge  bg-primary">{{$commit['sha']}}</span></a>
+                                        <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge bg-success"><i class="fas fa-code-branch"></i> master</span></a>
                                     </p>
                                 </div>
                             </div>

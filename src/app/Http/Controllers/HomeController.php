@@ -8,10 +8,18 @@ use Illuminate\Support\Facades\Http;
 class HomeController extends Controller
 {
     public function index(){
-        $commits = Http::withHeaders([
-            'Authorization'=>"token ".config('github.token'),
-            'Accept'=>"application/vnd.github.v3+json"
-        ])->get('https://api.github.com/repos/DriedSponge/cs-club-website/commits?per_page=5');
+        $authtoken = config('github.token');
+        if($authtoken == "public"){
+            $headers = [
+                'Accept'=>"application/vnd.github.v3+json"
+            ];
+        }else{
+            $headers = [
+                'Authorization'=>"token ".config('github.token'),
+                'Accept'=>"application/vnd.github.v3+json"
+            ];
+        }
+        $commits = Http::withHeaders($headers)->get('https://api.github.com/repos/DriedSponge/cs-club-website/commits?per_page=5');
         return view('pages.home')->with("commits",$commits->json());
     }
 }

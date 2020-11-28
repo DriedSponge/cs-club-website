@@ -55,7 +55,7 @@ so now we want to specify what goes in that yield for this page.
                     @if($commit['author'] == null)
                         @continue
                     @endif
-                    <div class="card shadow my-3 rounded-3">
+                    <div class="card shadow my-3 rounded-3 border-0">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-1 col-md-6">
@@ -63,7 +63,7 @@ so now we want to specify what goes in that yield for this page.
                                 </div>
                                 <div class="col-lg-11 col-md-6">
                                     <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong></p>
-                                    <p class="card-text text-break">
+                                    <p class="card-text ">
                                         <a href="{{$commit['html_url']}}" target="_blank"><span class="badge rounded-pill bg-primary">{{$commit['sha']}}</span></a>
                                         <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge rounded-pill bg-success">master</span></a>
                                     </p>

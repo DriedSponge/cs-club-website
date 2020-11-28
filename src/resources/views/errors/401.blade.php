@@ -12,5 +12,5 @@
             <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/issues/new"
                class="btn btn-outline-danger"><i class="fas fa-flag"></i> Report Issue</a>
         </div>
-    </div>s
+    </div>
 @endsection

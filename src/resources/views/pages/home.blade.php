@@ -35,10 +35,48 @@ so now we want to specify what goes in that yield for this page.
                             A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!
                         </p>
                         <br>
-                        <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn More</a>
+
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn More</a>
+                            <a target="_blank" href="https://forms.gle/KaEBXfWH2hKPJ52x6" class="btn btn-outline-success"><i class="fas fa-user-plus"></i> Join Now!</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <br>
+    <div class="container mb-5">
+        <div class="card shadow border-0 p-3">
+            <div class="card-body">
+                <h2>Recent Commits</h2>
+                <br>
+                @foreach($commits as $commit)
+                    @if($commit['author'] == null)
+                        @continue
+                    @endif
+                    <div class="card shadow my-3 rounded-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-6">
+                                    <img data-src="{{$commit['author']['avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64">
+                                </div>
+                                <div class="col-lg-11 col-md-6">
+                                    <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong></p>
+                                    <p class="card-text text-break">
+                                        <a href="{{$commit['html_url']}}" target="_blank"><span class="badge rounded-pill bg-primary">{{$commit['sha']}}</span></a>
+                                        <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge rounded-pill bg-success">master</span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+    <script>
+        const observer = lozad();
+        observer.observe();
+    </script>
 @endsection

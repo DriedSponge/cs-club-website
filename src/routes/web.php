@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // We name our routes so we can easily generate urls https://laravel.com/docs/8.x/helpers#method-route
-Route::get('/', function () {
-    return view('pages.home');
-})->name("home");
+Route::get('/','App\Http\Controllers\HomeController@index')->name("home");
 
 Route::get('/current-projects', function () {
     return view('pages.projects');

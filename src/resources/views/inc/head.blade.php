@@ -33,7 +33,6 @@
         <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8JDG0LSDH"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140402227-5"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0H601523QJ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

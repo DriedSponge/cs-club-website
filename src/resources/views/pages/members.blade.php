@@ -15,7 +15,7 @@
                      alt="soham">
                 <div class="text-center">
                     <h4>Soham Bhosale</h4>
-                    <h6 class="mb-2 text-muted">Club President</h6>
+                    <h6 class="mb-2 text-muted">President and Founder</h6>
                 </div>
             </div>
         </div>

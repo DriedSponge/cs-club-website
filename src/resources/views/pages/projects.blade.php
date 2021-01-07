@@ -17,20 +17,11 @@
                         </h4>
                         <div class="card-body">
                             <h5 class="card-title">About</h5>
-                            <p class="card-text">This project is our club website. All the information for the site,
-                                including how to contribute can be found in the projects <a
-                                        href="https://github.com/DriedSponge/cs-club-website#readme" target="_blank">README.md</a>.
-                                If you have any
-                                ideas for the site but don't feel like coding, create an issue on <a
-                                        href="https://github.com/DriedSponge/cs-club-website/issues/new"
-                                        target="_blank">github</a> and tell us
-                                what you think should be changed or fixed.</p>
-                            <div class="btn-group" role="group" aria-label="Basic example">
-                                <a target="_blank" href="https://github.com/DriedSponge/cs-club-website"
-                                   class="btn btn-outline-dark"><i class="fab fa-github"></i> Source Code</a>
-                                <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/issues/new"
-                                   class="btn btn-outline-danger"><i class="fas fa-flag"></i> Report Issue</a>
-                            </div>
+                            <p class="card-text">
+                                This project is our club website.
+                                If you are interested in partcipating in the project, let Jordan know and he can invite you to the repository.
+
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,9 @@ Route::get('/members', function () {
 Route::get('/privacy-policy', function () {
     return view("pages.privacy");
 })->name("privacy");
+
+Route::get('/login/github/invite', function () {
+    return Socialite::driver('github')->scopes(['repo:invite'])->redirect();
+})->name("invite");
+
+Route::get('/auth/github/invite', "App\Http\Controllers\Auth\GithubAuthController@invite")->name("invte-confirm");

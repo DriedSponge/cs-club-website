@@ -39,7 +39,7 @@ Route::get('/privacy-policy', function () {
 })->name("privacy");
 
 Route::get('/github/invite', function () {
-    return Socialite::driver('github')->scopes(['repo:invite'])->redirect();
+    return Socialite::driver('github')->setScopes(['repo:invite'])->redirect();
 })->name("invite");
 
 Route::get('/auth/github/invite', "App\Http\Controllers\Auth\GithubAuthController@invite")->name("invte-confirm");

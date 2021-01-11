@@ -9,8 +9,6 @@
         <div class="btn-group" role="group">
             <a href="#" class="btn btn-outline-dark" onclick="window.history.back()"><i class="fas fa-arrow-left"></i> Go Back</a>
             <a href="{{route('home')}}" class="btn btn-outline-dark"><i class="fas fa-home"></i> Go Home</a>
-            <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/issues/new"
-               class="btn btn-outline-danger"><i class="fas fa-flag"></i> Report Issue</a>
         </div>
     </div>
 @endsection

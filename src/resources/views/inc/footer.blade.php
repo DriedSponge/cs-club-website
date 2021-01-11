@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-12 my-2">
                 <div class="text-md-start text-center">
-                    <span class="text-muted">&copy; BHS Computer Science Club 2021</span>
+                    <span class="text-muted">&copy; Bothell High School Computer Science Club 2021</span>
 
                 </div>
             </div>

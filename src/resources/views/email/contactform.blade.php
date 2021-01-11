@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
-BHS CS Club Contact Form
+Bothell High School Computer Science Club Website Contact Form Response
 <br>
 <hr>
 <br>

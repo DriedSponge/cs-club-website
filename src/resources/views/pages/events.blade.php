@@ -8,6 +8,8 @@ https://laravel.com/docs/8.x/blade#extending-a-layout
 --}}
 @extends('layouts.app')
 
+@section('keywords','Events')
+
 {{--
 The @section directive, as the name implies, defines a section of content.
 

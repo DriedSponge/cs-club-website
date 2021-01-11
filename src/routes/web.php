@@ -38,7 +38,7 @@ Route::get('/privacy-policy', function () {
     return view("pages.privacy");
 })->name("privacy");
 
-Route::get('/login/github/invite', function () {
+Route::get('/github/invite', function () {
     return Socialite::driver('github')->scopes(['repo:invite'])->redirect();
 })->name("invite");
 

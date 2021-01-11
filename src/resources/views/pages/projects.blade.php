@@ -2,6 +2,7 @@
 @section('title','Projects')
 @section('description','Our clubs past, current, and future projects.')
 @section('content')
+
     <div class="container">
         <br>
         <h1 class="text-center display-4 font-weight-bold">Current Projects</h1>

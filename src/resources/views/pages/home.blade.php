@@ -19,6 +19,8 @@ so now we want to specify what goes in that yield for this page.
 {{-- Same as the title, but for the description. --}}
 @section('description',"A club that strives to build a community of students interested in Computer Science and coding that works on projects together. It encourages students to challenge themselves by attending hackathons, and competitive competitions like the U.S.A Computing Olympiad. No previous coding experience required!")
 
+@section('keywords','Home')
+
 {{-- This is where we define what goes into our content section --}}
 @section('content')
     <div id="intro">
@@ -37,7 +39,7 @@ so now we want to specify what goes in that yield for this page.
                         <br>
 
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn More</a>
+                            <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn About What We Are Working On</a>
                             <a target="_blank" href="https://forms.gle/KaEBXfWH2hKPJ52x6" class="btn btn-outline-success"><i class="fas fa-user-plus"></i> Join Now!</a>
                         </div>
                     </div>
@@ -59,7 +61,7 @@ so now we want to specify what goes in that yield for this page.
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-1 col-md-6">
-                                    <img data-src="{{$commit['author']['avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64">
+                                    <img data-src="{{$commit['author']['avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64" alt="{{$commit['author']['login']}} Profile Picture">
                                 </div>
                                 <div class="col-lg-11 col-md-6">
                                     <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong> <span data-toggle="tooltip" data-placement="top" title="{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->setTimezone("America/Los_Angeles")->toDayDateTimeString()}}" class="text-muted fst-italic">{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->diffForHumans()}}</span></p>

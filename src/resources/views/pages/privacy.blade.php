@@ -47,7 +47,7 @@
         <div class="card shadow mb-5">
             <h4 class="card-header text-md-left text-center">Changes to this Privacy Policy</h4>
             <div class="card-body">
-                <p class="card-text">BHS Computer Science Club has the discretion to update this privacy policy at any
+                <p class="card-text">Bothell High School Computer Science Club has the discretion to update this privacy policy at any
                     time.
                     When we do, we will post a notification on the main page of our site and revise the updated date at
                     the bottom of each section. We encourage Users to frequently check this page for any changes to stay

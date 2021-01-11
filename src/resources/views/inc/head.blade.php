@@ -16,6 +16,9 @@
     {{-- Sets the pages description to whatever the description @section is on the page--}}
     <meta name="description" content="@yield('description')">
 
+    {{-- Adds serch keywords to each page --}}
+    <meta name="keywords" content="Bothell High School Computer Scienc Club, BHS CS Club, Bothell Computer Science, @yield('keywords')">
+
     {{-- Sets the pages title to whatever the title @section is on the page--}}
     <title>@yield('title') - {{ config('app.name') }}</title>
 

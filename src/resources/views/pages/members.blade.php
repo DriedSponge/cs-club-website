@@ -1,6 +1,8 @@
 @extends('layouts.app')
 @section('title','Members')
 @section('description',"Our clubs members")
+@section('keywords','Members')
+
 @section('content')
 {{--    I switched things over to use the bootstrap grid system to help make the page responsive on mobile devices--}}
     <div class="container">

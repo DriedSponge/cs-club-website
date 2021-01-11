@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('title','Projects')
 @section('description','Our clubs past, current, and future projects.')
+@section('keywords','Projects')
+
 @section('content')
+
     <div class="container">
         <br>
         <h1 class="text-center display-4 font-weight-bold">Current Projects</h1>
@@ -19,9 +22,18 @@
                             <h5 class="card-title">About</h5>
                             <p class="card-text">
                                 This project is our club website.
-                                If you are interested in partcipating in the project, let Jordan know and he can invite you to the repository.
-
+                                It was created using the <a target="_blank" href="https://laravel.com/">Laravel PHP Framework</a>
+                                and <a target="_blank" href="https://getbootstrap.com/">Bootstrap CSS Library</a>. Currently the source code
+                                is private to protect it, however if you <a href="{{route('github.invite')}}">authenticate with Github</a>, the system will automatically
+                                send and accept a repository invite for you. If for whatever reason the system fails, let Jordan know and he can
+                                manually invite you to the repository.
                             </p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/"
+                                   class="btn btn-outline-dark"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="{{route('github.invite')}}"
+                                   class="btn btn-outline-dark"><i class="fas fa-unlock"></i> Gain Access To Source Code</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,6 +49,7 @@
                                 which each participant will design their own critter and compete to find out which
                                 critter is capable of dominating the critter world!
                             </p>
+
                             <a target="_blank"
                                href="https://courses.cs.washington.edu/courses/cse142/20su/homework.html#a8"
                                class="btn btn-outline-dark"><i class="far fa-file-code"></i> Starter Files</a>
@@ -80,4 +93,12 @@
             </div>
         </div>
     </div>
+    <script>
+        const observer = lozad();
+        observer.observe();
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 @endsection

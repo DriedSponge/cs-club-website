@@ -49,7 +49,7 @@ class GithubAuthController extends Controller
 
             if($invite->successful()){
                 $invite = $invite->json();
-                $accpet_invite = Http::withHeaders($user_headers)->asForm()->patch('https://api.github.com/user/repository_invitations/2'.$invite['id']);
+                $accpet_invite = Http::withHeaders($user_headers)->asForm()->patch('https://api.github.com/user/repository_invitations/'.$invite['id']);
                 if($accpet_invite->failed()){
                     return $this->returnResponse('warn',
                         'Then invite was successfully sent, but the system failed to accept it for you, you can accept it <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/invitations">here</a>.');

@@ -37,7 +37,7 @@ class GithubAuthController extends Controller
                                 'Then invite was successfully sent, but the system failed to accept it for you, you can accept it <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/invitations">here</a>.');
                         }
                         return $this->returnResponse('success',
-                            'The invite was successfully sent and accepted! You can open the repository <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/">here</a>!');
+                            'There was already an existing invite sent to you, we have accpeted it for you. You can open the repository <a target="_blank" href="https://github.com/DriedSponge/cs-club-website/">here</a>!');
                     }
                 }
             }

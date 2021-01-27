@@ -30,9 +30,7 @@ Route::get('/contact-us', function () {
 })->name("contactus");
 Route::post('/contact-us/send', 'App\Http\Controllers\ContactController@send')->name('contact-post');
 
-Route::get('/members', function () {
-    return view("pages.members");
-})->name("members");
+Route::get('/members', [\App\Http\Controllers\MembersController::class, 'index'])->name("members");
 
 Route::get('/privacy-policy', function () {
     return view("pages.privacy");

@@ -30,6 +30,7 @@ Route::get('/contact-us', function () {
 })->name("contactus");
 Route::post('/contact-us/send', 'App\Http\Controllers\ContactController@send')->name('contact-post');
 
+// When the end-user visits /members, execute the index function on the members contoller.
 Route::get('/members', [\App\Http\Controllers\MembersController::class, 'index'])->name("members");
 
 Route::get('/privacy-policy', function () {

@@ -22,14 +22,12 @@ class HomeController extends Controller
                     'Accept'=>"application/vnd.github.v3+json"
                 ];
             }
-           $commits = Http::withHeaders($headers)->get('https://api.github.com/repos/DriedSponge/cs-club-website/commits?per_page=5');
-           Storage::put('/github/recent_commits.json',$commits);
-           $commits = $commits->json();
+           $commits = collect(Http::withHeaders($headers)->get('https://api.github.com/repos/DriedSponge/cs-club-website/commits?per_page=5')->json());
+           Storage::put('/github/recent_commits.json',$commits->toJson());
         }else{
-            $commits = json_decode(Storage::get('/github/recent_commits.json'),true);
+            $commits = collect(json_decode(Storage::get('/github/recent_commits.json'),true));
         }
 
-        $commits = collect($commits);
         $commits = $commits->whereNotNull('author');
         $commits->transform(function ($item) {
             return Arr::dot($item);

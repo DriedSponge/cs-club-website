@@ -8,14 +8,15 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.3",
+        "php": "^8.0",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.0",
         "laravel/socialite": "^5.1",
         "laravel/tinker": "^2.0",
-        "socialiteproviders/github": "^4.1"
+        "socialiteproviders/github": "^4.1",
+      "ext-json": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",

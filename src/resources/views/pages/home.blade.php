@@ -54,19 +54,15 @@ so now we want to specify what goes in that yield for this page.
                 <h2>Recent Commits</h2>
                 <h6 class="text-muted fst-italic mb-4">Updated: {{\Carbon\Carbon::parse($lastupdated)->diffForHumans()}}</p></h6>
                 @foreach($commits as $commit)
-                    @if($commit['author'] == null)
-                        @continue
-                    @endif
                     <div class="card shadow my-3 rounded-3 border-0">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-lg-1 col-md-6">
-                                    <img data-src="{{$commit['author']['avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64" alt="{{$commit['author']['login']}} Profile Picture">
+                                    <img data-src="{{$commit['author.avatar_url']}}" class="lozad image-fluid rounded-circle" width="64" height="64" alt="{{$commit['author.login']}} Profile Picture">
                                 </div>
                                 <div class="col-lg-11 col-md-6">
-                                    <p class="card-text"><strong><a href="{{$commit['author']['html_url']}}" target="_blank">{{$commit['author']['login']}}</a> - {{$commit['commit']['message']}}</strong> <span data-toggle="tooltip" data-placement="top" title="{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->setTimezone("America/Los_Angeles")->toDayDateTimeString()}}" class="text-muted fst-italic">{{\Carbon\Carbon::parse($commit['commit']['committer']['date'])->diffForHumans()}}</span></p>
+                                    <p class="card-text"><strong><a href="{{$commit['author.html_url']}}" target="_blank">{{$commit['author.login']}}</a> - {{$commit['commit.message']}}</strong> <span data-toggle="tooltip" data-placement="top" title="{{\Carbon\Carbon::parse($commit['commit.committer.date'])->setTimezone("America/Los_Angeles")->toDayDateTimeString()}}" class="text-muted fst-italic">{{\Carbon\Carbon::parse($commit['commit.committer.date'])->diffForHumans()}}</span></p>
                                     <p class="card-text ">
-                                        <a href="{{$commit['html_url']}}" target="_blank"><span class="badge  bg-primary">{{$commit['sha']}}</span></a>
                                         <a href="https://github.com/DriedSponge/cs-club-website" target="_blank"><span class="badge bg-success"><i class="fas fa-code-branch"></i> master</span></a>
                                     </p>
                                 </div>

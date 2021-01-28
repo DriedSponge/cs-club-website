@@ -8,6 +8,22 @@ use Illuminate\Support\Arr;
 class MembersController extends Controller
 {
     public function index(Request $request){
+        $members = $this->members();
+        if($request->get("json")){
+            $members = $members->keyBy('name');
+            return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()],200);
+        }
+
+        return view("pages.members")->with(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()]);
+    }
+
+    public function api(){
+        $members = $this->members();
+        $members = $members->keyBy('name');
+        return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()],200);
+    }
+
+    private function members(){
         $members = collect([
             ["name"=>"Sathvik","title"=>"Internal Vice President","img"=>"sathvik.jpg"],
             ["name"=>"Adit Gupta","title"=>"External Vice President","img"=>"adit.jpg"],
@@ -41,11 +57,6 @@ class MembersController extends Controller
             return $item;
         });
 
-        if($request->get("json")){
-            $members = $members->keyBy('name');
-            return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()],200);
-        }
-
-        return view("pages.members")->with(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()]);
+        return $members;
     }
 }

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 
 class MembersController extends Controller
 {
@@ -11,16 +10,16 @@ class MembersController extends Controller
         $members = $this->members();
         if($request->get("json")){
             $members = $members->keyBy('name');
-            return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()],200);
+            return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->sortBy('name')->toArray()],200);
         }
 
-        return view("pages.members")->with(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()]);
+        return view("pages.members")->with(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->sortBy('name')->toArray()]);
     }
 
     public function api(){
         $members = $this->members();
         $members = $members->keyBy('name');
-        return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->toArray()],200);
+        return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->sortBy('name')->toArray()],200);
     }
 
     private function members(){
@@ -47,6 +46,7 @@ class MembersController extends Controller
             ["name"=>"Amanda Sim"],
             ["name"=>"Khushi Singh"],
             ["name"=>"Jordan Tucker"],
+            ["name"=>"Radu Holka"]
         ]);
 
         $members->transform(function ($item) {

@@ -47,6 +47,7 @@ class MembersController extends Controller
             ["name"=>"Amanda Sim"],
             ["name"=>"Khushi Singh"],
             ["name"=>"Jordan Tucker"],
+            ["name"=>"Radu Holka"]
         ]);
 
         $members->transform(function ($item) {

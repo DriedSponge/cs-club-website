@@ -32,22 +32,6 @@ so now we want to specify what goes in that yield for this page.
         <br>
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-4 col-md-6 col-sm-12 mb-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <b>Critters Competition</b> - Wednesday, November 25
-                        </div>
-                        <div class="card-body">
-                            <p>We will be designing our own critters and having them face off to see which one ends up
-                                dominating the critter world! P.S. The winner gets a prize.</p>
-                            <div class="text-center">
-                                <a class="btn btn-outline-primary"
-                                   href="https://drive.google.com/drive/u/0/folders/1EgCa18omcktXcXZxP7CqaHcs237zzrBF">Spec
-                                    & Files</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class=" col-lg-4 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header">
@@ -76,6 +60,30 @@ so now we want to specify what goes in that yield for this page.
                                 tackle this challenge!</p>
                             <div class="text-center">
                                 <a class="btn btn-outline-primary disabled" href="http://www.usaco.org/" disabled>Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-4 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <b>New Computing Problems This Week!</b>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                From this week, we are also starting new computing problems of the week activity!
+                                To keep our coding skills sharpened, we will work on one easy computing problem and one
+                                slightly harder one per week. We could discuss solutions/challenges during
+                                our Wednesday meetings as well.
+                                <br>
+                                You can write solutions in any of the languages that the U.S.A Computing Olympiad accepts.
+                            </p>
+                            <p class="text-center fw-bold">
+                                Here are this week's problems:
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-outline-success" href="http://www.usaco.org/index.php?page=viewproblem2&cpid=663" target="_blank" disabled>Easy Problem</a>
+                                <a class="btn btn-outline-danger" href="http://www.usaco.org/index.php?page=viewproblem2&cpid=736" target="_blank" disabled>Harder Problem</a>
                             </div>
                         </div>
                     </div>

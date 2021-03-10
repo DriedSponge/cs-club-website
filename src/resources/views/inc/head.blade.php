@@ -35,15 +35,10 @@
     {{-- Sets the favicon https://en.wikipedia.org/wiki/Favicon --}}
         <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8JDG0LSDH"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0H601523QJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
 
-        gtag('config', 'G-0H601523QJ');
-    </script>
+    {{-- Cloudflare Web Analytics --}}
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1766f56514d3439c8ede58223c3a279a"}'></script>
+
     <script src="https://kit.fontawesome.com/993187c8db.js" crossorigin="anonymous"></script>
     @yield('head')
 </head>

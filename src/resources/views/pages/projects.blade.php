@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row text-center justify-content-center">
+            <div class="row text-center">
                 <div class="col-sm-12 col-lg-6 mb-5">
                     <div class="card shadow">
                         <h4 class="card-header">
@@ -89,7 +89,45 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-12 col-lg-6 mb-5">
+                    <div class="card shadow">
+                        <h4 class="card-header">
+                            Discord Bots
+                        </h4>
+                        <div class="card-body">
+                            <h5 class="card-title">About</h5>
+                            <p class="card-text">
+                                This project involves the creation of Discord Bots using Python, JavaScript, or whatever language you want to use
+                                (as long as it has a library for discord). Discord bots are the same as your everyday JavaScript/Python apps, however
+                                they are connected to the Discord API. This allows them to listen for events that happen on discord (messages being sent, message reactions, etc)
+                                and perform functions based on these events. They can also directly contact the Discord API (sending messages, connecting to a voice channel, etc.
 
+                            </p>
+                            <div class="btn-group" role="group">
+                                <div class="btn-group" role="group">
+                                    <button id="pybtngrp" type="button" class="btn dropdown-toggle btn-outline-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fab fa-python"></i> Python
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="pybtngrp">
+                                        <li><a class="dropdown-item" href="https://www.python.org/" target="_blank">Python</a></li>
+                                        <li><a class="dropdown-item" href="https://discordpy.readthedocs.io/en/latest/index.html" target="_blank">DiscordPY Documentation</a></li>
+                                    </ul>
+                                </div>
+                                <div class="btn-group" role="group">
+                                    <button id="jsbtngrp" type="button" class="btn dropdown-toggle btn-outline-dark" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fab fa-js"></i> JavaScript
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="jsbtngrp">
+                                        <li><a class="dropdown-item" href="https://nodejs.org/en/" target="_blank">NodeJS</a></li>
+                                        <li><a class="dropdown-item" href="https://discord.js.org/#/" target="_blank">DiscordJS Documentation</a></li>
+                                    </ul>
+                                </div>
+                                <a target="_blank" href="https://discord.com/developers/"
+                                   class="btn btn-outline-dark"><i class="fab fa-discord"></i> Discord Developer Portal</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

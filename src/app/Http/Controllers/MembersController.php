@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class MembersController extends Controller
 {
@@ -17,9 +18,20 @@ class MembersController extends Controller
     }
 
     public function api(){
-        $members = $this->members();
-        $members = $members->keyBy('name');
-        return response()->json(['officers'=>$members->where('title')->toArray(),'members'=>$members->whereNull('title')->sortBy('name')->toArray()],200);
+        $members = $this->members()->keyBy("name");
+        return response()->json([
+            'officers'=>$members->where('title')->toArray(),
+            'members'=>$members->whereNull('title')->sortBy('name')->toArray()],
+            200);
+    }
+    public function apimember($member){
+        $member = $this->members()->first(function ($value, $key) use ($member) {
+            return Str::contains($value['name'],$member);
+        });
+        if(!$member){
+            return response()->json(['error'=>"Member not found"],404);
+        }
+        return response()->json($member);
     }
 
     private function members(){

@@ -39,7 +39,7 @@ so now we want to specify what goes in that yield for this page.
                         <br>
 
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn About What We Are Working On</a>
+                            <a class="btn btn-outline-primary" href="{{route('projects')}}"><i class="fas fa-book"></i> Learn About What We're Working On</a>
                             <a target="_blank" href="https://forms.gle/KaEBXfWH2hKPJ52x6" class="btn btn-outline-success"><i class="fas fa-user-plus"></i> Join Now!</a>
                         </div>
                     </div>

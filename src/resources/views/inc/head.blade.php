@@ -33,8 +33,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     {{-- Sets the favicon https://en.wikipedia.org/wiki/Favicon --}}
-        <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8JDG0LSDH"></script>
+    <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
 
     {{-- Cloudflare Web Analytics --}}
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1766f56514d3439c8ede58223c3a279a"}'></script>

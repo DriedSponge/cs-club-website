@@ -29,7 +29,7 @@ class ContactController extends Controller
             "message" => "required|min:15|max:2000"
         ]);
         if ($validator->passes()) {
-            $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            $response = Http::asForm()->post('https://hcaptcha.com/siteverify', [
                 'secret' => config('captcha.secret'),
                 'response' => $request->captcha_token,
             ]);

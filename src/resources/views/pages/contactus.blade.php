@@ -2,7 +2,7 @@
 @section('title',"Contact Us")
 @section('description','Fill out the contact form or send us an email to get in touch!')
 @section('head')
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script src="https://hcaptcha.com/1/api.js?onload=onloadCallback&render=explicit" async defer></script>
 @endsection
 @section('keywords','Contact, Contact Us, Contact Form')
 

@@ -35,9 +35,10 @@
     {{-- Sets the favicon https://en.wikipedia.org/wiki/Favicon --}}
     <link rel="icon" href="{{asset('favicon.png')}}" type="image/x-icon">
 
+    @if(App::environment('production')){
     {{-- Cloudflare Web Analytics --}}
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "1766f56514d3439c8ede58223c3a279a"}'></script>
-
+    @endif
     <script src="https://kit.fontawesome.com/993187c8db.js" crossorigin="anonymous"></script>
     @yield('head')
 </head>

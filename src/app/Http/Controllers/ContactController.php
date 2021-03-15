@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ContactFormResponse;
 use App\Models\Mail\ContactForm;
 use http\Exception;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Mail;
 use Validator;
 use Illuminate\Http\Response;
@@ -32,14 +33,16 @@ class ContactController extends Controller
             $response = Http::asForm()->post('https://hcaptcha.com/siteverify', [
                 'secret' => config('captcha.secret'),
                 'response' => $request->captcha_token,
-            ]);
+            ])->json();
             if ($response['success']) {
                 $data = new ContactFormResponse();
                 $data->Name = $request->name;
                 $data->Email = $request->email;
                 $data->Subject = $request->subject;
                 $data->Message = $request->message;
-                Mail::to(config('mail.contactemail'))->send(new ContactForm($data));
+                if(App::environment('production')){
+                    Mail::to(config('mail.contactemail'))->send(new ContactForm($data));
+                }
                 try {
                     return response()->json(['success' => 'Your message has been successfully sent!']);
                 } catch (Exception $e) {

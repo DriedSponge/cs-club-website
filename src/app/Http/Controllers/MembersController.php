@@ -38,7 +38,7 @@ class MembersController extends Controller
         $members = collect([
             ["name"=>"Sathvik","title"=>"Internal Vice President","img"=>"sathvik.jpg"],
             ["name"=>"Adit Gupta","title"=>"External Vice President","img"=>"adit.jpg"],
-            ["name"=>"Clair Li","title"=>"Secretary"],
+            ["name"=>"Claire Li","title"=>"Secretary","img"=>"claire.jpg"],
             ["name"=>"Roshan Skariah","title"=>"Treasurer","img"=>"roshan.jpg"],
             ["name"=>"Dash Pickrell","title"=>"Treasurer","img"=>"dash.jpg"],
             ["name"=>"Yasmine Shubber","title"=>"Public Relations"],

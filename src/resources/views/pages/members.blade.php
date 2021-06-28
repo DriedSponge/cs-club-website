@@ -9,7 +9,7 @@
         <br>
         <h1 class="text-center display-4 font-weight-bold">Our Members</h1>
         <br>
-        <h2 class="text-center font-weight-bold">Officers</h2>
+        <h2 class="text-center font-weight-bold">2021 - 2022 Officers</h2>
         <br>
         <div class="row justify-content-center">
             <div class="col-lg-2 col-md-6 col-sm-12">

@@ -31,36 +31,65 @@ so now we want to specify what goes in that yield for this page.
             community.</p>
         <br>
         <div class="container">
+            <h3 class="text-center font-weight-bold">Recurring Events</h3>
+            <br>
+            <div class="row text-center">
+                <div class=" col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            @php
+                                $date = \Carbon\Carbon::now();
+                               ;
+                            @endphp
+                            <b>Weekly USACO Mettings</b> - <i>Every Tuesday ({{ $date->next("tuesday")->format("m/d/Y") }})</i>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Every Tuesday we hold our weekly USACO meetings on discord. New problems will be posted in the discord every week!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-6 col-md-6 col-sm-12 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <b>Weekly General Mettings</b> - <i>Every Thursday ({{ $date->next("thursday")->format("m/d/Y") }})</i>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Every Thursday we hold our weekly club mettngs over zoom/discord. We discuss upcoming events, projects, competitions, & more!
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h3 class="text-center font-weight-bold">Past Events</h3>
+            <br>
             <div class="row text-center">
                 <div class=" col-lg-4 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            <b>Virtual Code Day</b> - December 4th - 6th (Complete)
+                            <b>Virtual Code Day</b> - <i>December 4th - 6th 2020</i>
                         </div>
                         <div class="card-body">
                             <p>We will be attending the Virtual CodeDay hackathon to help enhance our technical and team
                                 building skills. By attending this event, we will be also be able to meet new people and
                                 create a network.</p>
-                            <div class="text-center">
-                                <a class="btn btn-outline-primary disabled" href="https://virtual.codeday.org/"
-                                   disabled>Register</a>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class=" col-lg-4 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            <b>First Contest</b> - December 13th - 16th (Complete)
+                            <b>First Contest</b> - <i>December 13th - 16th 2020</i>
                         </div>
                         <div class="card-body">
                             <p>Our first competitive competition will be the U.S.A Computing Olympiad. It will really
                                 challenge us to learn new and advanced concepts, and further develop our problem solving
                                 skills. We will be having weekly drop-in practice sessions to help us learn how to
                                 tackle this challenge!</p>
-                            <div class="text-center">
-                                <a class="btn btn-outline-primary disabled" href="http://www.usaco.org/" disabled>Register</a>
-                            </div>
                         </div>
                     </div>
                 </div>

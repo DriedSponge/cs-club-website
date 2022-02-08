@@ -4,7 +4,8 @@
             <div class="col-md-6 col-sm-12 my-2">
                 <div class="text-md-start text-center">
                     <span class="text-muted">&copy; Bothell High School Computer Science Club 2021</span>
-
+                    <br>
+                    <span class="text-muted">This website is not affiliated with the Northshore School District or Bothell High Shchool.</span>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 my-2">

@@ -53,11 +53,11 @@ so now we want to specify what goes in that yield for this page.
                 <div class=" col-lg-6 col-md-6 col-sm-12 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            <b>Weekly General Mettings</b> - <i>Every Thursday ({{ $date->next("thursday")->format("m/d/Y") }})</i>
+                            <b>Bi-Weekly General Mettings</b> - <i>Every Thursday ({{ $date->next("thursday")->format("m/d/Y") }})</i>
                         </div>
                         <div class="card-body">
                             <p>
-                                Every Thursday we hold our weekly club mettngs over zoom/discord. We discuss upcoming events, projects, competitions, & more!
+                                Every other Thursday we hold our bi-weekly club mettngs over zoom/discord. We discuss upcoming events, projects, competitions, & more!
                             </p>
 
                         </div>
